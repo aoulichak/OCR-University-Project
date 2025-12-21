@@ -1,0 +1,21 @@
+# Dépendances pour OCR Intelligent + Google Gemini AI
+# ====================================================
+
+# Interface graphique
+PySide6>=6.5.0
+
+# Traitement d'image
+opencv-python>=4.8.0
+numpy>=1.24.0
+
+# OCR
+pytesseract>=0.3.10
+
+# Communication API
+requests>=2.31.0
+
+# Google Gemini AI
+google-generativeai>=0.8.0
+
+# Gestion des variables d'environnement
+python-dotenv>=1.0.0
