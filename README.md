@@ -90,19 +90,17 @@ Ce projet propose une **suite complète d'outils** pour la reconnaissance de car
 
 ```
 📦 OCR-University-Project
-├── 📁 ICR/                          # Module Reconnaissance Manuscrite
-│   ├── 🐍 icr_gui_app.py           # Application GUI PyQt5
-│   ├── 🧠 icr_cnn_model.pth        # Modèle CNN entraîné
-│   ├── 📓 ICR_v1_jupyter.ipynb     # Notebook d'entraînement
+├── 📁 V1/                              # Module OCR + IA
+│   ├── 🐍 OCR_V1.py                   # Application OCR avec Gemini
+│   ├── 🔐 .env                        # Configuration API (Gemini Key)
 │   └── 📋 requirements.txt
 │
-├── 📁 tesseract/                    # Module OCR + IA
-│   ├── 🐍 OCR_Gemini_AI.py         # Application OCR avec Gemini
-│   ├── 📖 README.md
-│   ├── 🔐 .env                      # Configuration API
+├── 📁 V2/                              # Module ICR (Deep Learning)
+│   ├── 🐍 icr_gui_app.py              # Application GUI PyQt5
+│   ├── 🧠 icr_cnn_model.pth           # Modèle CNN entraîné
+│   ├── 📓 ICR_v1_jupyter.ipynb        # Notebook d'entraînement
 │   └── 📋 requirements.txt
 │
-├──  rapport_technique_OCR_ICR.tex # Documentation LaTeX
 └── 📖 README.md
 ```
 
@@ -136,7 +134,7 @@ graph LR
 
 ```bash
 # 1. Cloner le repository
-git clone https://github.com/votre-repo/OCR-University-Project.git
+git clone https://github.com/aoulichak/OCR-University-Project.git
 cd OCR-University-Project
 
 # 2. Créer un environnement virtuel
@@ -146,8 +144,8 @@ source venv/bin/activate  # Linux/Mac
 .\venv\Scripts\activate   # Windows
 
 # 3. Installer les dépendances
-pip install -r ICR/requirements.txt
-pip install -r tesseract/requirements.txt
+pip install -r V1/requirements.txt
+pip install -r V2/requirements.txt
 ```
 
 ### 🔧 Configuration Tesseract (Windows)
@@ -163,8 +161,8 @@ C:\Program Files\Tesseract-OCR\tesseract.exe
 ### 🔑 Configuration Google Gemini API
 
 ```bash
-# Créer le fichier .env dans le dossier tesseract/
-echo "GEMINI_API_KEY=votre_cle_api" > tesseract/.env
+# Créer le fichier .env dans le dossier V1/
+echo "GEMINI_API_KEY=votre_cle_api" > V1/.env
 ```
 
 > 💡 Obtenez votre clé API sur [Google AI Studio](https://makersuite.google.com/app/apikey)
@@ -176,8 +174,8 @@ echo "GEMINI_API_KEY=votre_cle_api" > tesseract/.env
 ### 🖨️ Lancer l'OCR avec Gemini AI
 
 ```bash
-cd tesseract
-python OCR_Gemini_AI.py
+cd V1
+python OCR_V1.py
 ```
 
 <details>
@@ -194,7 +192,7 @@ L'interface permet de :
 ### ✍️ Lancer l'ICR (Reconnaissance Manuscrite)
 
 ```bash
-cd ICR
+cd V2
 python icr_gui_app.py
 ```
 
@@ -236,9 +234,7 @@ L'interface permet de :
 
 ## 📚 Documentation
 
-- 📄 **Rapport Technique** : [rapport_technique_OCR_ICR.tex](rapport_technique_OCR_ICR.tex)
-- 📓 **Notebook Entraînement** : [ICR_v1_jupyter.ipynb](ICR/ICR_v1_jupyter.ipynb)
-- 📖 **README Tesseract** : [tesseract/README.md](tesseract/README.md)
+- � **Notebook Entraînement** : [ICR_v1_jupyter.ipynb](V2/ICR_v1_jupyter.ipynb)
 
 ---
 
