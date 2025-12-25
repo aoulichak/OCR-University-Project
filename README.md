@@ -7,7 +7,7 @@
 </p>
 
 <h1 align="center">
-  🔤 OCR & ICR Intelligence Suite
+  🔤 OCR-University-Project
 </h1>
 
 <p align="center">
@@ -33,7 +33,6 @@ Ce projet propose une **suite complète d'outils** pour la reconnaissance de car
 |--------|-------------|-------------|
 | **🖨️ OCR** | Tesseract + Gemini AI | Reconnaissance de texte imprimé multilingue avec correction IA |
 | **✍️ ICR** | CNN PyTorch | Reconnaissance de caractères manuscrits via Deep Learning |
-| **📱 QR Generator** | qrcode | Génération de codes QR personnalisables |
 
 ---
 
@@ -85,19 +84,12 @@ Ce projet propose une **suite complète d'outils** pour la reconnaissance de car
 </tr>
 </table>
 
-### 📱 Générateur QR Code
-
-- 🔗 Génération à partir d'URL ou texte
-- 🎨 Personnalisation des couleurs
-- 🖼️ Support de logos intégrés
-- 📐 Haute correction d'erreurs
-
 ---
 
 ## 🏗️ Architecture
 
 ```
-📦 OCR-ICR-Suite
+📦 OCR-University-Project
 ├── 📁 ICR/                          # Module Reconnaissance Manuscrite
 │   ├── 🐍 icr_gui_app.py           # Application GUI PyQt5
 │   ├── 🧠 icr_cnn_model.pth        # Modèle CNN entraîné
@@ -110,8 +102,7 @@ Ce projet propose une **suite complète d'outils** pour la reconnaissance de car
 │   ├── 🔐 .env                      # Configuration API
 │   └── 📋 requirements.txt
 │
-├── 🐍 ToQr.py                       # Générateur QR Code
-├── 📄 rapport_technique_OCR_ICR.tex # Documentation LaTeX
+├──  rapport_technique_OCR_ICR.tex # Documentation LaTeX
 └── 📖 README.md
 ```
 
@@ -145,8 +136,8 @@ graph LR
 
 ```bash
 # 1. Cloner le repository
-git clone https://github.com/votre-repo/ocr-icr-suite.git
-cd ocr-icr-suite
+git clone https://github.com/votre-repo/OCR-University-Project.git
+cd OCR-University-Project
 
 # 2. Créer un environnement virtuel
 python -m venv venv
@@ -217,18 +208,6 @@ L'interface permet de :
 4. Effacer et recommencer
 
 </details>
-
-### 📱 Générer un QR Code
-
-```python
-from ToQr import generer_qr_code, generer_qr_avec_logo
-
-# QR Code simple
-generer_qr_code("https://github.com", "mon_qr.png")
-
-# QR Code avec logo
-generer_qr_avec_logo("https://github.com", "logo.png", "qr_logo.png")
-```
 
 ---
 
