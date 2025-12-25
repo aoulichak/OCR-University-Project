@@ -1,69 +1,347 @@
-# OCR University Project
+<p align="center">
+  <img src="https://img.shields.io/badge/Python-3.10+-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python"/>
+  <img src="https://img.shields.io/badge/PyTorch-2.0+-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white" alt="PyTorch"/>
+  <img src="https://img.shields.io/badge/Tesseract-OCR-5A9BD4?style=for-the-badge&logo=google&logoColor=white" alt="Tesseract"/>
+  <img src="https://img.shields.io/badge/Google%20Gemini-AI-8E75B2?style=for-the-badge&logo=google&logoColor=white" alt="Gemini"/>
+  <img src="https://img.shields.io/badge/License-MIT-green?style=for-the-badge" alt="License"/>
+</p>
 
-This repository contains two distinct Optical Character Recognition (OCR) projects developed for a university curriculum. It showcases a transition from high-level API integration to low-level model training using Deep Learning.
+<h1 align="center">
+  🔤 OCR & ICR Intelligence Suite
+</h1>
 
-## 📝 Project Description
-This repository features two OCR projects: **V1** is a Python-based interface integrating Tesseract for local text extraction and the Gemini API for advanced refinement. **V2** focuses on deep learning, featuring a custom CNN model trained on the A-Z dataset to recognize handwritten characters. A complete university-level computer vision portfolio.
+<p align="center">
+  <strong>Reconnaissance Optique et Intelligente de Caractères</strong><br>
+  <em>Une solution complète combinant OCR classique et Deep Learning pour la reconnaissance de texte</em>
+</p>
+
+<p align="center">
+  <a href="#-fonctionnalités">Fonctionnalités</a> •
+  <a href="#-architecture">Architecture</a> •
+  <a href="#-installation">Installation</a> •
+  <a href="#-utilisation">Utilisation</a> •
+  <a href="#-équipe">Équipe</a>
+</p>
 
 ---
 
-## 📂 Repository Structure
+## 📋 À Propos
 
-### **V1: Hybrid OCR & Gemini Refinement**
-A practical application designed to handle real-world documents where standard OCR often produces "noisy" results.
-* **Core Engine:** `Pytesseract` (Tesseract OCR) for baseline text extraction.
-* **AI Enhancement:** Integrated with the **Google Gemini API** to post-process text, correcting spelling mistakes and improving semantic formatting.
-* **Interface:** A Python-based GUI/Web interface for easy image uploading and result comparison.
+Ce projet propose une **suite complète d'outils** pour la reconnaissance de caractères, combinant :
 
-### **V2: Custom A-Z Character Recognition**
-A deep learning project focused on building an OCR engine from the ground up.
-* **Model Architecture:** A Convolutional Neural Network (CNN) built with `TensorFlow` and `Keras`.
-* **Dataset:** Trained on the **A-Z Handwritten Alphabets** dataset.
-* **Pipeline:** Includes image preprocessing (grayscaling, resizing to $28 \times 28$, and normalization) and model evaluation metrics.
+| Module | Technologie | Description |
+|--------|-------------|-------------|
+| **🖨️ OCR** | Tesseract + Gemini AI | Reconnaissance de texte imprimé multilingue avec correction IA |
+| **✍️ ICR** | CNN PyTorch | Reconnaissance de caractères manuscrits via Deep Learning |
+| **📱 QR Generator** | qrcode | Génération de codes QR personnalisables |
 
 ---
 
-## 🛠️ Installation & Setup
+## ✨ Fonctionnalités
 
-### 1. Prerequisites
-* **Python 3.10+**
-* **Tesseract OCR Engine:** [Install Tesseract](https://github.com/tesseract-ocr/tesseract) and ensure it is added to your System PATH.
-* **Gemini API Key:** Obtain a key from the [Google AI Studio](https://aistudio.google.com/).
+### 🖨️ Module OCR (Tesseract + Google Gemini)
 
-### 2. Clone the Repository
-```bash
-git clone [https://github.com/aoulichak/OCR-University-Project.git](https://github.com/aoulichak/OCR-University-Project.git)
-cd OCR-University-Project
-```
-### 3. Install Dependencies
-**Bash**
-```bash
-pip install pytesseract google-generativeai tensorflow opencv-python pillow matplotlib
-```
-### 🚀 How to Run
+<table>
+<tr>
+<td width="50%">
 
-#### **Running Project V1**
-1. Navigate to the `V1` folder.
-2. Add your **Gemini API key** to the configuration file or environment variables.
-3. Run the application:
-```bash
-python main.py
-```
-#### **Running Project V2**
-1. Ensure the **A-Z dataset** (CSV or images) is placed in the `data/` directory.
-2. Train the model:
-```bash
-python train.py
-```
-Test predictions:
-```bash
-python predict.py --image path/to/char.png
-```
-### Technical Summary
+**Extraction de Texte**
+- 🌍 Support multilingue (Français, Arabe, Anglais)
+- 🖼️ Prétraitement d'image automatique
+- 📊 Détection automatique du type de document
 
-| Feature | Project V1 | Project V2 |
-| :--- | :--- | :--- |
-| **Method** | Pre-trained + LLM | Custom CNN Training |
-| **Input** | Full Document Images | Single Handwritten Characters |
-| **Key Tech** | Tesseract, Gemini API | TensorFlow, Keras, OpenCV |
-| **Complexity** | High-level Integration | Low-level Deep Learning |
+</td>
+<td width="50%">
+
+**Intelligence Artificielle**
+- 🤖 Correction par Google Gemini AI
+- ✏️ Amélioration orthographique et grammaticale
+- 📝 Classification intelligente des documents
+
+</td>
+</tr>
+</table>
+
+### ✍️ Module ICR (Deep Learning)
+
+<table>
+<tr>
+<td width="50%">
+
+**Reconnaissance CNN**
+- 🧠 Architecture 3 blocs convolutionnels
+- 📈 Précision > 90% (Top-5 > 98%)
+- ⚡ Prédiction en temps réel
+
+</td>
+<td width="50%">
+
+**Interface Utilisateur**
+- 🎨 Canvas de dessin interactif
+- 📊 Affichage Top-5 des prédictions
+- 💾 Export des résultats
+
+</td>
+</tr>
+</table>
+
+### 📱 Générateur QR Code
+
+- 🔗 Génération à partir d'URL ou texte
+- 🎨 Personnalisation des couleurs
+- 🖼️ Support de logos intégrés
+- 📐 Haute correction d'erreurs
+
+---
+
+## 🏗️ Architecture
+
+```
+📦 OCR-ICR-Suite
+├── 📁 ICR/                          # Module Reconnaissance Manuscrite
+│   ├── 🐍 icr_gui_app.py           # Application GUI PyQt5
+│   ├── 🧠 icr_cnn_model.pth        # Modèle CNN entraîné
+│   ├── 📓 ICR_v1_jupyter.ipynb     # Notebook d'entraînement
+│   └── 📋 requirements.txt
+│
+├── 📁 tesseract/                    # Module OCR + IA
+│   ├── 🐍 OCR_Gemini_AI.py         # Application OCR avec Gemini
+│   ├── 📖 README.md
+│   ├── 🔐 .env                      # Configuration API
+│   └── 📋 requirements.txt
+│
+├── 🐍 ToQr.py                       # Générateur QR Code
+├── 📄 rapport_technique_OCR_ICR.tex # Documentation LaTeX
+└── 📖 README.md
+```
+
+### 🔄 Pipeline de Traitement
+
+```mermaid
+graph LR
+    A[📷 Image] --> B[🔧 Prétraitement]
+    B --> C{Type?}
+    C -->|Imprimé| D[Tesseract OCR]
+    C -->|Manuscrit| E[CNN PyTorch]
+    D --> F[🤖 Gemini AI]
+    E --> G[Softmax]
+    F --> H[📝 Texte Corrigé]
+    G --> I[🔤 Lettre Prédite]
+```
+
+---
+
+## 🛠️ Installation
+
+### Prérequis Système
+
+| Logiciel | Version | Lien |
+|----------|---------|------|
+| Python | 3.10+ | [python.org](https://python.org) |
+| Tesseract OCR | 5.0+ | [GitHub](https://github.com/UB-Mannheim/tesseract/wiki) |
+| CUDA (optionnel) | 11.8+ | [nvidia.com](https://developer.nvidia.com/cuda-downloads) |
+
+### 📥 Installation Rapide
+
+```bash
+# 1. Cloner le repository
+git clone https://github.com/votre-repo/ocr-icr-suite.git
+cd ocr-icr-suite
+
+# 2. Créer un environnement virtuel
+python -m venv venv
+source venv/bin/activate  # Linux/Mac
+# ou
+.\venv\Scripts\activate   # Windows
+
+# 3. Installer les dépendances
+pip install -r ICR/requirements.txt
+pip install -r tesseract/requirements.txt
+```
+
+### 🔧 Configuration Tesseract (Windows)
+
+```bash
+# Installer Tesseract dans le chemin par défaut
+C:\Program Files\Tesseract-OCR\tesseract.exe
+
+# Installer les packs de langues
+# fra.traineddata, ara.traineddata, eng.traineddata
+```
+
+### 🔑 Configuration Google Gemini API
+
+```bash
+# Créer le fichier .env dans le dossier tesseract/
+echo "GEMINI_API_KEY=votre_cle_api" > tesseract/.env
+```
+
+> 💡 Obtenez votre clé API sur [Google AI Studio](https://makersuite.google.com/app/apikey)
+
+---
+
+## 🚀 Utilisation
+
+### 🖨️ Lancer l'OCR avec Gemini AI
+
+```bash
+cd tesseract
+python OCR_Gemini_AI.py
+```
+
+<details>
+<summary>📸 Capture d'écran OCR</summary>
+
+L'interface permet de :
+1. Charger une image contenant du texte
+2. Sélectionner les langues de reconnaissance
+3. Appliquer la correction IA
+4. Exporter le texte corrigé
+
+</details>
+
+### ✍️ Lancer l'ICR (Reconnaissance Manuscrite)
+
+```bash
+cd ICR
+python icr_gui_app.py
+```
+
+<details>
+<summary>📸 Capture d'écran ICR</summary>
+
+L'interface permet de :
+1. Dessiner une lettre à la souris
+2. Obtenir les 5 meilleures prédictions
+3. Visualiser le niveau de confiance
+4. Effacer et recommencer
+
+</details>
+
+### 📱 Générer un QR Code
+
+```python
+from ToQr import generer_qr_code, generer_qr_avec_logo
+
+# QR Code simple
+generer_qr_code("https://github.com", "mon_qr.png")
+
+# QR Code avec logo
+generer_qr_avec_logo("https://github.com", "logo.png", "qr_logo.png")
+```
+
+---
+
+## 📊 Performances
+
+| Métrique | Module OCR | Module ICR |
+|----------|------------|------------|
+| **Précision** | Élevée (avec Gemini) | > 90% |
+| **Top-5 Accuracy** | N/A | > 98% |
+| **Langues** | FR, AR, EN | A-Z (26 classes) |
+| **Temps de réponse** | ~2-3s | < 100ms |
+
+### 🧠 Architecture CNN (ICR)
+
+| Couche | Type | Output Shape | Paramètres |
+|--------|------|--------------|------------|
+| Input | — | (1, 28, 28) | 0 |
+| Conv Block 1 | Conv+BN+ReLU+Pool | (32, 14, 14) | 320 |
+| Conv Block 2 | Conv+BN+ReLU+Pool | (64, 7, 7) | 18,496 |
+| Conv Block 3 | Conv+BN+ReLU+Pool | (128, 3, 3) | 73,856 |
+| FC1 | Linear+ReLU+Dropout | (256,) | 295,168 |
+| FC2 | Linear | (26,) | 6,682 |
+| **Total** | | | **394,522** |
+
+---
+
+## 📚 Documentation
+
+- 📄 **Rapport Technique** : [rapport_technique_OCR_ICR.tex](rapport_technique_OCR_ICR.tex)
+- 📓 **Notebook Entraînement** : [ICR_v1_jupyter.ipynb](ICR/ICR_v1_jupyter.ipynb)
+- 📖 **README Tesseract** : [tesseract/README.md](tesseract/README.md)
+
+---
+
+## 🛠️ Technologies Utilisées
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Python-FFD43B?style=for-the-badge&logo=python&logoColor=blue" alt="Python"/>
+  <img src="https://img.shields.io/badge/PyTorch-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white" alt="PyTorch"/>
+  <img src="https://img.shields.io/badge/OpenCV-5C3EE8?style=for-the-badge&logo=opencv&logoColor=white" alt="OpenCV"/>
+  <img src="https://img.shields.io/badge/Qt-41CD52?style=for-the-badge&logo=qt&logoColor=white" alt="Qt"/>
+  <img src="https://img.shields.io/badge/NumPy-013243?style=for-the-badge&logo=numpy&logoColor=white" alt="NumPy"/>
+  <img src="https://img.shields.io/badge/Google%20AI-4285F4?style=for-the-badge&logo=google&logoColor=white" alt="Google AI"/>
+</p>
+
+---
+
+## 👥 Équipe
+
+<table align="center">
+  <tr>
+    <td align="center">
+      <img src="https://img.shields.io/badge/👨‍💻-Developer-blue?style=for-the-badge" alt="Dev"/><br/>
+      <strong>X</strong><br/>
+      <sub>Développeur</sub>
+    </td>
+    <td align="center">
+      <img src="https://img.shields.io/badge/👨‍💻-Developer-blue?style=for-the-badge" alt="Dev"/><br/>
+      <strong>Y</strong><br/>
+      <sub>Développeur</sub>
+    </td>
+    <td align="center">
+      <img src="https://img.shields.io/badge/👨‍💻-Developer-blue?style=for-the-badge" alt="Dev"/><br/>
+      <strong>Z</strong><br/>
+      <sub>Développeur</sub>
+    </td>
+    <td align="center">
+      <img src="https://img.shields.io/badge/👨‍💻-Developer-blue?style=for-the-badge" alt="Dev"/><br/>
+      <strong>K</strong><br/>
+      <sub>Développeur</sub>
+    </td>
+  </tr>
+</table>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/👨‍🏫-Encadrant-purple?style=for-the-badge" alt="Supervisor"/><br/>
+  <strong>Pr. H</strong><br/>
+  <sub>Encadrant du Projet</sub>
+</p>
+
+---
+
+## 🎓 Contexte Académique
+
+<p align="center">
+  <strong>Université Hassan Premier</strong><br/>
+  Faculté des Sciences et Techniques de Settat<br/>
+  Département d'Informatique<br/>
+  <em>Décembre 2025</em>
+</p>
+
+---
+
+## 📄 Licence
+
+Ce projet est sous licence MIT. Voir le fichier [LICENSE](LICENSE) pour plus de détails.
+
+---
+
+## 🙏 Remerciements
+
+- **Google** pour l'API Gemini AI
+- **Tesseract OCR** pour le moteur de reconnaissance
+- **PyTorch** pour le framework Deep Learning
+- **EMNIST & Kaggle** pour les datasets d'entraînement
+
+---
+
+<p align="center">
+  <strong>⭐ Si ce projet vous a été utile, n'hésitez pas à lui donner une étoile !</strong>
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Made%20with-❤️-red?style=for-the-badge" alt="Made with love"/>
+  <img src="https://img.shields.io/badge/Python-Powered-yellow?style=for-the-badge&logo=python" alt="Python Powered"/>
+</p>
