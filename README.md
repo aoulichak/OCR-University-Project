@@ -7,7 +7,7 @@
 </p>
 
 <h1 align="center">
-  🔤 OCR-University-Project
+  OCR-University-Project
 </h1>
 
 <p align="center">
@@ -16,6 +16,7 @@
 </p>
 
 <p align="center">
+  <a href="#-à-propos">À Propos</a> •
   <a href="#-fonctionnalités">Fonctionnalités</a> •
   <a href="#-architecture">Architecture</a> •
   <a href="#-installation">Installation</a> •
@@ -25,60 +26,60 @@
 
 ---
 
-## 📋 À Propos
+## À Propos
 
 Ce projet propose une **suite complète d'outils** pour la reconnaissance de caractères, combinant :
 
 | Module | Technologie | Description |
 |--------|-------------|-------------|
-| **🖨️ OCR** | Tesseract + Gemini AI | Reconnaissance de texte imprimé multilingue avec correction IA |
-| **✍️ ICR** | CNN PyTorch | Reconnaissance de caractères manuscrits via Deep Learning |
+| **OCR** | Tesseract + Gemini AI | Reconnaissance de texte imprimé multilingue avec correction IA |
+| **ICR** | CNN PyTorch | Reconnaissance de caractères manuscrits via Deep Learning |
 
 ---
 
-## ✨ Fonctionnalités
+## Fonctionnalités
 
-### 🖨️ Module OCR (Tesseract + Google Gemini)
+### Module OCR — Tesseract + Google Gemini
 
 <table>
 <tr>
 <td width="50%">
 
 **Extraction de Texte**
-- 🌍 Support multilingue (Français, Arabe, Anglais)
-- 🖼️ Prétraitement d'image automatique
-- 📊 Détection automatique du type de document
+- Support multilingue (Français, Arabe, Anglais)
+- Prétraitement d'image automatique
+- Détection automatique du type de document
 
 </td>
 <td width="50%">
 
 **Intelligence Artificielle**
-- 🤖 Correction par Google Gemini AI
-- ✏️ Amélioration orthographique et grammaticale
-- 📝 Classification intelligente des documents
+- Correction par Google Gemini AI
+- Amélioration orthographique et grammaticale
+- Classification intelligente des documents
 
 </td>
 </tr>
 </table>
 
-### ✍️ Module ICR (Deep Learning)
+### Module ICR — Deep Learning
 
 <table>
 <tr>
 <td width="50%">
 
 **Reconnaissance CNN**
-- 🧠 Architecture 3 blocs convolutionnels
-- 📈 Précision > 90% (Top-5 > 98%)
-- ⚡ Prédiction en temps réel
+- Architecture 3 blocs convolutionnels
+- Précision > 90% (Top-5 > 98%)
+- Prédiction en temps réel
 
 </td>
 <td width="50%">
 
 **Interface Utilisateur**
-- 🎨 Canvas de dessin interactif
-- 📊 Affichage Top-5 des prédictions
-- 💾 Export des résultats
+- Canvas de dessin interactif
+- Affichage Top-5 des prédictions
+- Export des résultats
 
 </td>
 </tr>
@@ -86,41 +87,41 @@ Ce projet propose une **suite complète d'outils** pour la reconnaissance de car
 
 ---
 
-## 🏗️ Architecture
+## Architecture
 
 ```
-📦 OCR-University-Project
-├── 📁 V1/                              # Module OCR + IA
-│   ├── 🐍 OCR_V1.py                   # Application OCR avec Gemini
-│   ├── 🔐 .env                        # Configuration API (Gemini Key)
-│   └── 📋 requirements.txt
+OCR-University-Project/
+├── V1/                              # Module OCR + IA
+│   ├── OCR_V1.py                    # Application OCR avec Gemini
+│   ├── .env                         # Configuration API (Gemini Key)
+│   └── requirements.txt
 │
-├── 📁 V2/                              # Module ICR (Deep Learning)
-│   ├── 🐍 icr_gui_app.py              # Application GUI PyQt5
-│   ├── 🧠 icr_cnn_model.pth           # Modèle CNN entraîné
-│   ├── 📓 ICR_v1_jupyter.ipynb        # Notebook d'entraînement
-│   └── 📋 requirements.txt
+├── V2/                              # Module ICR (Deep Learning)
+│   ├── icr_gui_app.py               # Application GUI PyQt5
+│   ├── icr_cnn_model.pth            # Modèle CNN entraîné
+│   ├── ICR_v1_jupyter.ipynb         # Notebook d'entraînement
+│   └── requirements.txt
 │
-└── 📖 README.md
+└── README.md
 ```
 
-### 🔄 Pipeline de Traitement
+### Pipeline de Traitement
 
 ```mermaid
 graph LR
-    A[📷 Image] --> B[🔧 Prétraitement]
+    A[Image] --> B[Prétraitement]
     B --> C{Type?}
     C -->|Imprimé| D[Tesseract OCR]
     C -->|Manuscrit| E[CNN PyTorch]
-    D --> F[🤖 Gemini AI]
+    D --> F[Gemini AI]
     E --> G[Softmax]
-    F --> H[📝 Texte Corrigé]
-    G --> I[🔤 Lettre Prédite]
+    F --> H[Texte Corrigé]
+    G --> I[Lettre Prédite]
 ```
 
 ---
 
-## 🛠️ Installation
+## Installation
 
 ### Prérequis Système
 
@@ -130,7 +131,7 @@ graph LR
 | Tesseract OCR | 5.0+ | [GitHub](https://github.com/UB-Mannheim/tesseract/wiki) |
 | CUDA (optionnel) | 11.8+ | [nvidia.com](https://developer.nvidia.com/cuda-downloads) |
 
-### 📥 Installation Rapide
+### Installation Rapide
 
 ```bash
 # 1. Cloner le repository
@@ -148,7 +149,7 @@ pip install -r V1/requirements.txt
 pip install -r V2/requirements.txt
 ```
 
-### 🔧 Configuration Tesseract (Windows)
+### Configuration Tesseract (Windows)
 
 ```bash
 # Installer Tesseract dans le chemin par défaut
@@ -158,20 +159,20 @@ C:\Program Files\Tesseract-OCR\tesseract.exe
 # fra.traineddata, ara.traineddata, eng.traineddata
 ```
 
-### 🔑 Configuration Google Gemini API
+### Configuration Google Gemini API
 
 ```bash
 # Créer le fichier .env dans le dossier V1/
 echo "GEMINI_API_KEY=votre_cle_api" > V1/.env
 ```
 
-> 💡 Obtenez votre clé API sur [Google AI Studio](https://makersuite.google.com/app/apikey)
+> Obtenez votre clé API sur [Google AI Studio](https://makersuite.google.com/app/apikey)
 
 ---
 
-## 🚀 Utilisation
+## Utilisation
 
-### 🖨️ Lancer l'OCR avec Gemini AI
+### Lancer l'OCR avec Gemini AI
 
 ```bash
 cd V1
@@ -179,7 +180,7 @@ python OCR_V1.py
 ```
 
 <details>
-<summary>📸 Capture d'écran OCR</summary>
+<summary>Capture d'écran OCR</summary>
 
 L'interface permet de :
 1. Charger une image contenant du texte
@@ -189,7 +190,7 @@ L'interface permet de :
 
 </details>
 
-### ✍️ Lancer l'ICR (Reconnaissance Manuscrite)
+### Lancer l'ICR (Reconnaissance Manuscrite)
 
 ```bash
 cd V2
@@ -197,7 +198,7 @@ python icr_gui_app.py
 ```
 
 <details>
-<summary>📸 Capture d'écran ICR</summary>
+<summary>Capture d'écran ICR</summary>
 
 L'interface permet de :
 1. Dessiner une lettre à la souris
@@ -209,7 +210,7 @@ L'interface permet de :
 
 ---
 
-## 📊 Performances
+## Performances
 
 | Métrique | Module OCR | Module ICR |
 |----------|------------|------------|
@@ -218,7 +219,7 @@ L'interface permet de :
 | **Langues** | FR, AR, EN | A-Z (26 classes) |
 | **Temps de réponse** | ~2-3s | < 100ms |
 
-### 🧠 Architecture CNN (ICR)
+### Architecture CNN (ICR)
 
 | Couche | Type | Output Shape | Paramètres |
 |--------|------|--------------|------------|
@@ -232,13 +233,13 @@ L'interface permet de :
 
 ---
 
-## 📚 Documentation
+## Documentation
 
-- � **Notebook Entraînement** : [ICR_v1_jupyter.ipynb](V2/ICR_v1_jupyter.ipynb)
+- **Notebook Entraînement** : [ICR_v1_jupyter.ipynb](V2/ICR_v1_jupyter.ipynb)
 
 ---
 
-## 🛠️ Technologies Utilisées
+## Technologies Utilisées
 
 <p align="center">
   <img src="https://img.shields.io/badge/Python-FFD43B?style=for-the-badge&logo=python&logoColor=blue" alt="Python"/>
@@ -251,42 +252,25 @@ L'interface permet de :
 
 ---
 
-## 👥 Équipe
+## Équipe
 
 <table align="center">
   <tr>
     <td align="center">
-      <img src="https://img.shields.io/badge/👨‍💻-Developer-blue?style=for-the-badge" alt="Dev"/><br/>
-      <strong>X</strong><br/>
-      <sub>Développeur</sub>
-    </td>
-    <td align="center">
-      <img src="https://img.shields.io/badge/👨‍💻-Developer-blue?style=for-the-badge" alt="Dev"/><br/>
-      <strong>Y</strong><br/>
-      <sub>Développeur</sub>
-    </td>
-    <td align="center">
-      <img src="https://img.shields.io/badge/👨‍💻-Developer-blue?style=for-the-badge" alt="Dev"/><br/>
-      <strong>Z</strong><br/>
-      <sub>Développeur</sub>
-    </td>
-    <td align="center">
-      <img src="https://img.shields.io/badge/👨‍💻-Developer-blue?style=for-the-badge" alt="Dev"/><br/>
-      <strong>K</strong><br/>
-      <sub>Développeur</sub>
+      <img src="https://img.shields.io/badge/Developer-Mohamed%20Aoulichak-2962FF?style=for-the-badge&logo=github&logoColor=white" alt="Dev"/><br/>
+      <sub>Développeur Full-Stack</sub>
     </td>
   </tr>
 </table>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/👨‍🏫-Encadrant-purple?style=for-the-badge" alt="Supervisor"/><br/>
-  <strong>Pr. H</strong><br/>
-  <sub>Encadrant du Projet</sub>
+  <img src="https://img.shields.io/badge/Supervisor-Pr.%20Chaimae%20Azroumahli-7B1FA2?style=for-the-badge&logo=google-scholar&logoColor=white" alt="Supervisor"/><br/>
+  <sub>Encadrante du Projet</sub>
 </p>
 
 ---
 
-## 🎓 Contexte Académique
+## Contexte Académique
 
 <p align="center">
   <strong>Université Hassan Premier</strong><br/>
@@ -297,13 +281,13 @@ L'interface permet de :
 
 ---
 
-## 📄 Licence
+## Licence
 
 Ce projet est sous licence MIT. Voir le fichier [LICENSE](LICENSE) pour plus de détails.
 
 ---
 
-## 🙏 Remerciements
+## Remerciements
 
 - **Google** pour l'API Gemini AI
 - **Tesseract OCR** pour le moteur de reconnaissance
@@ -313,10 +297,10 @@ Ce projet est sous licence MIT. Voir le fichier [LICENSE](LICENSE) pour plus de 
 ---
 
 <p align="center">
-  <strong>⭐ Si ce projet vous a été utile, n'hésitez pas à lui donner une étoile !</strong>
+  <strong>If this project was helpful, consider giving it a star!</strong>
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Made%20with-❤️-red?style=for-the-badge" alt="Made with love"/>
-  <img src="https://img.shields.io/badge/Python-Powered-yellow?style=for-the-badge&logo=python" alt="Python Powered"/>
+  <img src="https://img.shields.io/badge/Made%20with-Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Made with Python"/>
+  <img src="https://img.shields.io/badge/Powered%20by-Deep%20Learning-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white" alt="Deep Learning"/>
 </p>
